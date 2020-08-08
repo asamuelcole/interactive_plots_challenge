@@ -9,7 +9,7 @@
 
 // Fetch data
 function plotting(id) {
-  d3.json("../samples.json").then(function(data) {
+  d3.json("./samples.json").then(function(data) {
       var ids = data.samples[0].otu_ids;
       var samples_10 = data.samples[0].sample_values.slice(0, 10).reverse();
       var labels_10 = data.samples[0].otu_labels.slice(0, 10)
@@ -58,7 +58,7 @@ function plotting(id) {
 // create the function to get the necessary data
 function demographs(id) {
   // read the json file to get data
-      d3.json("../samples.json").then((data)=> {
+      d3.json("./samples.json").then((data)=> {
   // get the metadata info for the demographic panel
           var metadata = data.metadata;
   
@@ -90,7 +90,7 @@ function demographs(id) {
       var dropdown = d3.select("#selDataset");
   
       // read data 
-      d3.json("../samples.json").then((data)=> {
+      d3.json("./samples.json").then((data)=> {
           console.log(data)
   
           // id data to display
